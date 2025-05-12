@@ -8,7 +8,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [[InlineKeyboardButton("Pagar suscripción / Pay subscription", url=STRIPE_LINK)]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "Hi there! to have access to the channel, first you need to pay the monthly subscription:",
+        "Welcome! Click below to subscribe and get access to the premium Telegram channel.",
         reply_markup=reply_markup
     )
 
