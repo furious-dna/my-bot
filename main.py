@@ -69,7 +69,7 @@ def stripe_webhook():
             text=f"🎉 Thanks for your payment! Here is your access link:\n{CHANNEL_INVITE_LINK}"
         )
 
-    # Pago fallido (desuscripción o tarjeta rechazada)
+    # Pago fallido
     if event["type"] == "invoice.payment_failed":
         customer = event["data"]["object"]
         telegram_id = customer["metadata"].get("telegram_id")
